@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(147, 7%, 49%)">
+	<div class="container">
+	  <div style="margin-top: 20px; margin-bottom: 20px; border-radius: 20px;" class="card text-black" >
+	  <div class="row gx-lg-5 align-items-center">
+		<div class="col-lg-6 mb-5 mb-lg-0">
+			<img style="border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 600px;" src="{{url_for('static', filename='5816422.jpg')}}" alt="image"/>
+		  <p style="color: hsl(217, 10%, 50.8%)">
+		  </p>
+		</div>
+		<div class="col-lg-6 mb-5 mb-lg-0">
+		  <h2 style="text-align: center;">Login</h2>
+		  <div class="card" style="margin-right: 50px; border-radius: 20px;">
+			<div class=" py-5 px-md-5">
+			  <form method="POST" action="/login">
+				<div class="form-outline mb-4">
+				  <label class="form-label" for="form3Example3">Username</label>
+				  <input class="form-control" type="text" name="username" placeholder="Username">
+				</div>
+				<div class="form-outline mb-4">
+				  <label class="form-label" for="form3Example4">Password</label>
+				  <input class="form-control" type="password" name="password" placeholder="Password">
+				</div>
+				<div class="form-check d-flex justify-content-center mb-4">
+				  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+				  <label class="form-check-label" for="form2Example33">
+					<p>Not a member? <a href="{{ url_for('register')}}">Register</a></p>
+				  </label>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block mb-4">
+				  Sign up
+				</button>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+{% endblock %}
+
+

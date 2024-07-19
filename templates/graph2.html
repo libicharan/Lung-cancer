@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<script>
+    window.onload = function () {
+        
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,	
+        title: {
+            text:"World Lung cancer statistics"
+        },
+        axisX: {
+            interval: 1
+        },
+        axisY2: {
+            interlacedColor: "rgba(1,77,101,.2)",
+            gridColor: "rgba(1,77,101,.1)",
+            title: "Number of Pepoles"
+        },
+        data: [{
+            type: "bar",
+            name: "companies",
+            color: "#014D65",
+            axisYType: "secondary",
+            dataPoints: [
+                { y: 166, label: "France, New Caledonia" },
+                { y: 144, label: "French Polynesia" },
+                { y: 443, label: "Montenegro" },
+                { y: 2513, label: "Bosnia and Herzegovina" },
+                { y: 5047, label: "Denmark" },
+                { y: 8048, label: "Serbia" },
+                { y: 9646, label: "Belgium" },
+                { y: 10274, label: "Hungary" },
+                { y: 13672, label: "North Korea" },
+                { y: 41264, label: "Turkey" }
+
+            ]
+        }]
+    });
+    chart.render();
+    }
+    </script>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+{% endblock %}

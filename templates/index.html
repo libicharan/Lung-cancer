@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+<style>
+    div.scroll {
+      background-color: #faf9fa;
+      width: 100%;
+      height: 600px;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+  </style>
+<div class="scroll">
+<video style="width: 100%;" id="background-video" autoplay loop muted poster="">
+    <source src="{{url_for('static', filename='lung_video.mp4')}}" type="video/mp4">
+</video>
+<h1>What is Lung Cancer?</h1>
+<h3>Lung cancer is a type of cancer that begins in the lungs. Your lungs are two spongy organs in your chest that take in oxygen when you inhale and release carbon dioxide when you exhale.</h3>
+<h3>Lung cancer is the leading cause of cancer deaths worldwide.</h3>
+<h3>People who smoke have the greatest risk of lung cancer, though lung cancer can also occur in people who have never smoked. The risk of lung cancer increases with the length of time and number of cigarettes you've smoked. If you quit smoking, even after smoking for many years, you can significantly reduce your chances of developing lung cancer.</h3>
+<h1>Symptoms</h1>
+<h3>Lung cancer typically doesn't cause signs and symptoms in its earliest stages. Signs and symptoms of lung cancer typically occur when the disease is advanced.</h3>
+<h3>Signs and symptoms of lung cancer may include:</h3>
+
+        <h3>1. A new cough that doesn't go away</h3>
+        <h3>2. Coughing up blood, even a small amount</h3>
+        <h3>3. Shortness of breath</h3>
+        <h3>4. Chest pain</h3>
+        <h3>5. Hoarseness</h3>
+        <h3>6. Losing weight without trying</h3>
+        <h3>7. Bone pain</h3>
+        <h3>8. Headache</h3>
+
+<h1>WORLD LUNG CANCER DAY - AUGUST 1</h1>
+<h3>On World Lung Cancer Day, August 1, the Forum of International Respiratory Societies (FIRS) and its founding member, GOLD, stress the importance of understanding lung cancer risk factors, as well as the importance of early detection through screening and treatment.</h3>
+<h3>According to the World Health Organization, lung cancer is the leading cause of cancer-related deaths worldwide for both men and women. In 2020, there were 2.21 million new lung cancer cases globally and 1.80 million deaths.</h3>
+<h3>While smoking is the single greatest risk factor for lung cancer, accounting for 85 percent of all cases, other lesser-known risk factors include environmental exposures and genetics. Environmental exposure to radon, asbestos, arsenic, beryllium, and uranium has been linked to lung cancer. The risk of lung cancer also increases with a history of cancer in another part of the body, age, family history, radiation to the chest area, and lung diseases like chronic obstructive pulmonary disease (COPD).</h3>
+<h3>World Lung Cancer Day offers an opportunity to raise awareness for the staggering global impact of this cancer. With one in four cancer deaths attributed to lung cancer, it is of critical importance to promote early detection through symptom awareness and lung cancer screening. Through early detection, treatment can begin, the cancer is less likely to spread, and we can begin to reduce the number of lung cancer deaths worldwide.</h3>
+<h3>If you currently smoke or have a history of smoking and are 50 years or older, you may be a candidate for a screening low-dose CT scan that can potentially detect lung cancer in its earliest stages.</h3>
+<h3>Lung cancer symptoms include a persistent and worsening cough, coughing up blood, chest or back pain, and difficulty swallowing. Tests that may be used to diagnose lung cancer include chest X-rays, Chest CT and PET scans, bronchoscopy, and needle biopsies.</h3>
+</div>
+{% endblock %}

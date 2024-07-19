@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    div.scroll {
+      background-color: white;
+      width: 100%;
+      height: 500px;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+  </style>
+<div style=" text-align: right;">
+		<a class="login100-form-btn" href="/logout"><button type="button" class="btn btn-danger">Logout</button></a>
+</div>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<span class="login100-form-title p-b-51">
+					<h3>Predict the Result</h3>
+				</span>
+			</div>
+		</div>
+	</div>
+		<div class="col-lg-4">
+		<form id="upload-file" method="post" enctype="multipart/form-data">
+			<label for="imageUpload" class="upload-label">
+				Choose...
+			</label>
+			<input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+		</form>
+	
+		<div class="image-section" style="display:none;">
+			<div class="img-preview">
+				<div id="imagePreview">
+				</div>
+			</div>
+			<div>
+				<button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+			</div>
+		</div>
+	
+		<div class="loader" style="display:none;"></div>
+	
+		<h3 id="result">
+			<span> </span>
+		</h3>
+	</div>
+	<div class="col-lg-8">
+		<div class="scroll">
+			<h2 id="titletext"></h2>
+		<h4 id="treatment1">
+
+		</h4>
+	</div>
+	</div>
+
+	<script>
+		// Get the <h1> element by its ID
+		var h1Element = document.getElementById("result");
+		
+		// Get the text content of the <h1> element
+		var headingText = h1Element.innerText;
+		
+		// Print the text content
+		// console.log(headingText);
+		</script>
+	
+{% endblock %}
